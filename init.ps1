@@ -36,8 +36,10 @@ Function Login-WoW
 {
 	.\Wow.exe
 	Start-Sleep -s 3
-
+	$Job = Get-Process Wow | Select-Object -Property Id
 	$wsh = New-Object -ComObject WScript.Shell
+	$wsh.AppActivate($Job.Id)
+	Start-Sleep -s 1
 	$wsh.SendKeys($ACCOUNT)
 	Start-Sleep -s 1
 	$wsh.SendKeys("{TAB}")

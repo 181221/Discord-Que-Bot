@@ -23,17 +23,16 @@ def start():
 async def on_ready():
     print("The bot is ready!")
 
-
 @client.event
 async def on_message(message):
     channel = message.channel
     if message.author == client.user:
         return
 
-    if message.content == "que":
+    if message.content.lower() == "que":
         await channel.send('Relax, I will que up for you :D')
         start()
-        time.sleep(30)
+        time.sleep(15)
         ImageGrab.grab().save(FILE_NAME, "JPEG")
         await channel.send(file=discord. File(FILE_NAME))
         os.remove(FILE_NAME)
