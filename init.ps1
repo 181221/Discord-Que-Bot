@@ -2,6 +2,8 @@
 
 $PATH='C:\Program Files (x86)\World of Warcraft\_classic_'
 $hashTable = @{}
+$X_CLICK=792
+$Y_CLICK=228
 
 Function Get-Environment-Variables {
 	Get-Content .env | Foreach-Object{
@@ -20,7 +22,7 @@ $PASSWORD= $hashTable['PASSWORD']
 
 function Click-MouseButton
 {
-    [System.Windows.Forms.Cursor]::Position = New-Object System.Drawing.Point(792,228)
+    [System.Windows.Forms.Cursor]::Position = New-Object System.Drawing.Point($X_CLICK,$Y_CLICK)
     $signature=@' 
       [DllImport("user32.dll",CharSet=CharSet.Auto, CallingConvention=CallingConvention.StdCall)]
       public static extern void mouse_event(long dwFlags, long dx, long dy, long cButtons, long dwExtraInfo);

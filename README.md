@@ -33,4 +33,16 @@ Go to your channel in discord and type "que"
  2. Navigate to C:\Windows\System32\WindowsPowerShell\v1.0. and select powershell.exe
  3. Finish
  4. Right click on shortcut and select Properties to open the new window
- 5. In textbox called target write C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File "C:\your_path\start.ps1" -WindowsStyle Hidden
+ 5. In textbox called target write C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe python .\DiscordBot.py
+ 6. In Start in box write: C:\yourpath
+ 7. Press okey
+
+
+ ### get mouse position
+ write this in powershell
+```
+Add-Type -AssemblyName System.Windows.Forms
+$X = [System.Windows.Forms.Cursor]::Position.X
+$Y = [System.Windows.Forms.Cursor]::Position.Y
+Write-Output "X: $X | Y: $Y"
+```
