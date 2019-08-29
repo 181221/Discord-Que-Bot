@@ -8,7 +8,7 @@ load_dotenv(find_dotenv())
 
 FILE_NAME="screen.jpg"
 TOKEN = os.getenv("TOKEN")
-PATH_TO_SCRIPT = "init.ps1"
+PATH_TO_SCRIPT = ".\init.ps1"
 POWER_COMMAND = ["powershell.exe", "-ExecutionPolicy", "ByPass", PATH_TO_SCRIPT]
 
 client = discord.Client()
