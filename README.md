@@ -46,3 +46,11 @@ $X = [System.Windows.Forms.Cursor]::Position.X
 $Y = [System.Windows.Forms.Cursor]::Position.Y
 Write-Output "X: $X | Y: $Y"
 ```
+
+
+### fix image scaling in python 
+ 1. Go to where you have installed pythen and rightclick on python.exe and click properties
+ 2. Click on the compatibility tab click change high DPI settings 
+ 3. check Override high DPI scaling behavior 
+
+ 

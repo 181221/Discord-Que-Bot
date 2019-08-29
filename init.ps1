@@ -41,14 +41,14 @@ Function Login-WoW
 	$Job = Get-Process Wow | Select-Object -Property Id
 	$wsh = New-Object -ComObject WScript.Shell
 	$wsh.AppActivate($Job.Id)
-	Start-Sleep -s 1
+	Start-Sleep -s 2
 	$wsh.SendKeys($ACCOUNT)
-	Start-Sleep -s 1
+	Start-Sleep -s 2
 	$wsh.SendKeys("{TAB}")
 	$wsh.SendKeys($PASSWORD)
-	Start-Sleep -s 1
-	$wsh.SendKeys("{ENTER}")
 	Start-Sleep -s 2
+	$wsh.SendKeys("{ENTER}")
+	Start-Sleep -s 4
 	$wsh.SendKeys("{ENTER}")
 	Start-Sleep -s 5
 	Click-MouseButton

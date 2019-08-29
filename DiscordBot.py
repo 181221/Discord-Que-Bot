@@ -32,7 +32,7 @@ async def on_message(message):
     if message.content.lower() == "que":
         await channel.send('Relax, I will que up for you :D')
         start()
-        time.sleep(15)
+        time.sleep(3)
         ImageGrab.grab().save(FILE_NAME, "JPEG")
         await channel.send(file=discord. File(FILE_NAME))
         os.remove(FILE_NAME)
