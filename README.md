@@ -20,7 +20,7 @@ pip install -r /path/to/requirements.txt
 This might take a minute
 then run this command
 ```
-Start-Process python .\DiscordBot.py
+ python .\DiscordBot.py
 ```
 
 Go to your channel in discord and type "que"
