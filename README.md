@@ -24,3 +24,13 @@ then run this command
 ```
 
 Go to your channel in discord and type "que"
+
+
+
+### create a shortcut 
+
+ 1. Right click anywhere on the Desktop (or in a folder) and select New Shortcut.
+ 2. Navigate to C:\Windows\System32\WindowsPowerShell\v1.0. and select powershell.exe
+ 3. Finish
+ 4. Right click on shortcut and select Properties to open the new window
+ 5. In textbox called target write C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File "C:\your_path\start.ps1" -WindowsStyle Hidden
