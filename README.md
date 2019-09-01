@@ -39,8 +39,9 @@ $X = [System.Windows.Forms.Cursor]::Position.X
 $Y = [System.Windows.Forms.Cursor]::Position.Y
 Write-Output "X: $X | Y: $Y"
 ```
+Add  the result to X_CLICK and Y_CLICK in init.ps1
 
-then run this command
+Then run the configuration is done and you can start the bot with this command.
 ```
  python .\DiscordBot.py
 ```
