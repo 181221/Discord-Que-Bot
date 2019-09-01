@@ -45,11 +45,9 @@ This might take a minute
 This is an important step because you will the bot need P(x,y) of realm server. Just hoover over your server and run the following command in powershell
 ```
 Add-Type -AssemblyName System.Windows.Forms
-$X = [System.Windows.Forms.Cursor]::Position.X
-$Y = [System.Windows.Forms.Cursor]::Position.Y
-Write-Output "X: $X | Y: $Y"
+[System.Windows.Forms.Cursor]::Position
 ```
-Add  the result to X_CLICK and Y_CLICK in init.ps1
+Add the result to X_CLICK and Y_CLICK in init.ps1
 
 Then run the configuration is done and you can start the bot with this command.
 ```
