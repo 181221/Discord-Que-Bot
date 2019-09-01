@@ -27,7 +27,7 @@ This will enable you to get the position and estimated time of the que. The appl
 
 Open powershell in working directory and run the following command
 ```
-pip install -r /path/to/requirements.txt
+pip install -r .\requirements.txt
 ```
 This might take a minute
 
