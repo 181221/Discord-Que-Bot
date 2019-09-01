@@ -13,6 +13,18 @@ ACCOUNT=YOUR ACCOUNT NAME
 PASSWORD=YOUR PASSWORD
 ```
 
+### Azure Cognitive Services
+if you want Azure Cognitive Services you need to create an instance of it on Azure and add
+```
+ENDPOINT=[endpoint]cognitiveservices.azure.com
+AZURE_COGNITIVE_SERVICE_KEY=YOUR_SECRET_KEY
+```
+When that is done update azure variable in DiscordBot.py to True
+
+This will enable you to get the position and estimated time of the que. The application will work without ACS
+
+### Installation
+
 Open powershell in working directory and run the following command
 ```
 pip install -r /path/to/requirements.txt
@@ -35,8 +47,8 @@ then run this command
 
 Go to your channel in discord and type "que or position"
 
-
-### create a shortcut
+![wow que](./que.JPG)
+### Create a shortcut
 If you want a shortcut icon that start the bot, do the following.
 
  1. Right click anywhere on the Desktop (or in a folder) and select New Shortcut.
@@ -48,10 +60,7 @@ If you want a shortcut icon that start the bot, do the following.
  7. Press okay
 
 
-
-
-
-### fix image scaling in python
+### Fix image scaling in python
 if the image receive in discord in not in full screen, then this should work.
  1. Go to where you have installed pythen and rightclick on python.exe and click properties
  2. Click on the compatibility tab click change high DPI settings 

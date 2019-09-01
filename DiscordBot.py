@@ -14,7 +14,7 @@ PATH_TO_SCRIPT = ".\init.ps1"
 POWER_COMMAND = ["powershell.exe", "-ExecutionPolicy", "ByPass", PATH_TO_SCRIPT]
 client = discord.Client()
 
-azure = True # set this to false if you do not want Azure Cognitive Service to get text from image.You will need to create an istance of OCR
+azure = False # set this to false if you do not want Azure Cognitive Service to get text from image.You will need to create an istance of OCR
 hasOpenWow = False
 
 
