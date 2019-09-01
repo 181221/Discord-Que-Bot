@@ -37,11 +37,13 @@ async def on_message(message):
 
     if message.content.lower() == "position":
         if hasOpenWow:
+            channel.send("Getting position in que")
             time.sleep(5)
             ImageGrab.grab().save(FILE_NAME, "JPEG")
             ocr = OCR()
             ocr.recognize_text(FILE_NAME)
             await channel.send(ocr.estimated_que_time + "\n" + ocr.position_in_que)
+            ocr.recognize_text(FILE_NAME)
         else:
             await channel.send("wow is not running, run the que command to start")
 

@@ -37,7 +37,7 @@ function Click-MouseButton
 Function Login-WoW
 {
 	.\Wow.exe
-	Start-Sleep -s 3
+	Start-Sleep -s 8
 	$Job = Get-Process Wow | Select-Object -Property Id
 	$wsh = New-Object -ComObject WScript.Shell
 	$wsh.AppActivate($Job.Id)
