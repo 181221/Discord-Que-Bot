@@ -60,7 +60,9 @@ Go to your channel in discord and type "que or position"
 
 ![wow que](./que.JPG)
 ### Create a shortcut
-If you want a shortcut icon that start the bot, do the following.
+Right click on the StartBot shortcut, click properties and change the location in "start in:" to where this repository is.
+If that doesnt work try this manual approach. 
+
 
  1. Right click anywhere on the Desktop (or in a folder) and select New Shortcut.
  2. Navigate to C:\Windows\System32\WindowsPowerShell\v1.0. and select powershell.exe
