@@ -3,17 +3,27 @@
 ## Getting Started
 Make sure you have python and pip installed
 
-First create a discord bot and add it to your discord server.
+Create a discord application [from here ](discordapp.com/developers/applications/)
+name your application what ever you want and then click on the settingstab "Bot".
+1. Click add bot 
+2. Then Click to reveal Token. Save this token.
+3. Go To OAuth2 tab and select bot as scope
+4. Add Send Messages and Attach Files as Bot permissions.
+5. Copy the link and paste it in a new tab.
+6. Select a server to add the bot to if you dont have one, create one and refresh the page.
+ 
 
-After you have create the bot create a file name .env in this directory.
+
+
+After you have created the bot. Go ahead and create a new file name .env in this directory. Add the following to it.
 
 ```
 TOKEN=YOUR DISCORD TOKEN
-ACCOUNT=YOUR ACCOUNT NAME
-PASSWORD=YOUR PASSWORD
+ACCOUNT=YOUR WOW ACCOUNT NAME
+PASSWORD=YOUR WOW PASSWORD
 ```
 
-### Azure Cognitive Services
+### Azure Cognitive Services [optional]
 if you want Azure Cognitive Services you need to create an instance of it on Azure and add
 ```
 ENDPOINT=[endpoint]cognitiveservices.azure.com
