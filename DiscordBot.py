@@ -1,5 +1,6 @@
 import discord
-import subprocess, sys
+import subprocess
+import sys
 import os
 import time
 from PIL import Image, ImageGrab
@@ -11,10 +12,11 @@ load_dotenv(find_dotenv())
 FILE_NAME = "screen.jpg"
 TOKEN = os.getenv("TOKEN")
 PATH_TO_SCRIPT = ".\init.ps1"
-POWER_COMMAND = ["powershell.exe", "-ExecutionPolicy", "ByPass", PATH_TO_SCRIPT]
+POWER_COMMAND = ["powershell.exe",
+                 "-ExecutionPolicy", "ByPass", PATH_TO_SCRIPT]
 client = discord.Client()
 
-azure = False # set this to false if you do not want Azure Cognitive Service to get text from image.You will need to create an istance of OCR
+azure = True  # set this to false if you do not want Azure Cognitive Service to get text from image.You will need to create an istance of OCR
 hasOpenWow = False
 
 
@@ -50,14 +52,17 @@ async def on_message(message):
     if message.content.lower() == "que":
         await channel.send('Relax, I will que up for you :D')
         start()
-        time.sleep(5)
+        time.sleep(10)
         ImageGrab.grab().save(FILE_NAME, "JPEG")
         await channel.send(file=discord.File(FILE_NAME))
         if azure:
             hasOpenWow = True
             ocr = OCR()
             ocr.recognize_text(FILE_NAME)
-            await channel.send(ocr.estimated_que_time + "\n" + ocr.position_in_que)
+            if(ocr.estimated_que_time and ocr.position_in_que):
+                await channel.send(ocr.estimated_que_time + "\n" + ocr.position_in_que)
+            else:
+                await channel.send("failed to get estimated time")
 
         os.remove(FILE_NAME)
 
