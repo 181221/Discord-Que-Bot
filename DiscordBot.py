@@ -16,7 +16,7 @@ POWER_COMMAND = ["powershell.exe",
                  "-ExecutionPolicy", "ByPass", PATH_TO_SCRIPT]
 client = discord.Client()
 
-azure = True  # set this to false if you do not want Azure Cognitive Service to get text from image.You will need to create an istance of OCR
+azure = False  # set this to false if you do not want Azure Cognitive Service to get text from image.You will need to create an istance of OCR
 hasOpenWow = False
 
 
@@ -52,7 +52,7 @@ async def on_message(message):
     if message.content.lower() == "que":
         await channel.send('Relax, I will que up for you :D')
         start()
-        time.sleep(10)
+        time.sleep(5)
         ImageGrab.grab().save(FILE_NAME, "JPEG")
         await channel.send(file=discord.File(FILE_NAME))
         if azure:
